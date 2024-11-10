@@ -12,6 +12,9 @@ buildExpired: false
 pygmentsUseClasses: true
 mainsections: ["posts", "papermod"]
 
+permalinks:
+  posts: /posts/:filename/
+  
 minify:
   disableXML: true
   # minifyOutput: true
