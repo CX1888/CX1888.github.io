@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://example.org/tags/blog/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/categories/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.org/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://example.org/posts/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/tags/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tech-note/</loc>
+    <loc>https://example.org/categories/tech-note/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tutorial/</loc>
+    <loc>https://example.org/tags/tutorial/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8C%E4%B8%BB%E9%A2%98paper-mod%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://example.org/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8C%E4%B8%BB%E9%A2%98paper-mod%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://example.org/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://example.org/search/</loc>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://example.org/series/</loc>
   </url>
 </urlset>
