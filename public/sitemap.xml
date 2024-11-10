@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/tags/blog/</loc>
+    <loc>https://cx1888.github.io/tags/blog/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://cx1888.github.io/categories/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>https://cx1888.github.io/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://cx1888.github.io/posts/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://cx1888.github.io/tags/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/tech-note/</loc>
+    <loc>https://cx1888.github.io/categories/tech-note/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/tutorial/</loc>
+    <loc>https://cx1888.github.io/tags/tutorial/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8C%E4%B8%BB%E9%A2%98paper-mod%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://cx1888.github.io/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8C%E4%B8%BB%E9%A2%98paper-mod%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2024-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/archives/</loc>
+    <loc>https://cx1888.github.io/archives/</loc>
   </url><url>
-    <loc>https://example.org/search/</loc>
+    <loc>https://cx1888.github.io/search/</loc>
   </url><url>
-    <loc>https://example.org/series/</loc>
+    <loc>https://cx1888.github.io/series/</loc>
   </url>
 </urlset>

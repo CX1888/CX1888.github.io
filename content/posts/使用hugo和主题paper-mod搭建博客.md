@@ -33,3 +33,64 @@ https://gohugo.io/installation/windows/
 
 使用hugo server -D启动本地服务器查看博文
 
+# 6. 部署Hugo网站到Github Pages
+创建目录
+`mkdir -p .github/workflows`
+
+创建工作流文件
+`touch .github/workflows/hugo.yaml`
+
+添加以下内容到 hugo.yaml
+```name: Deploy Hugo site to Pages
+
+on:
+  push:
+    branches:
+      - main  # 设置要触发部署的分支
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2```
+
+
+

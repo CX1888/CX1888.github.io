@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tutorial on Cx&#39;s Blog</title>
-    <link>https://example.org/tags/tutorial/</link>
+    <link>https://cx1888.github.io/tags/tutorial/</link>
     <description>Recent content in Tutorial on Cx&#39;s Blog</description>
     <image>
       <title>Cx&#39;s Blog</title>
-      <url>https://example.org/images/papermod-cover.png</url>
-      <link>https://example.org/images/papermod-cover.png</link>
+      <url>https://cx1888.github.io/images/papermod-cover.png</url>
+      <link>https://cx1888.github.io/images/papermod-cover.png</link>
     </image>
     <generator>Hugo -- 0.137.0</generator>
     <language>en</language>
     <lastBuildDate>Sun, 10 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cx1888.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use hugo-PaperMod to build a blog</title>
-      <link>https://example.org/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8C%E4%B8%BB%E9%A2%98paper-mod%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://cx1888.github.io/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8C%E4%B8%BB%E9%A2%98paper-mod%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8C%E4%B8%BB%E9%A2%98paper-mod%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://cx1888.github.io/posts/%E4%BD%BF%E7%94%A8hugo%E5%92%8C%E4%B8%BB%E9%A2%98paper-mod%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;h1 id=&#34;1-安装hugo&#34;&gt;1. 安装hugo&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/installation/windows/&#34;&gt;https://gohugo.io/installation/windows/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;winget install Hugo.Hugo.Extended&lt;/code&gt;&lt;/p&gt;
@@ -31,7 +31,63 @@
 &lt;p&gt;使用exampleSite中的配置文件&lt;/p&gt;
 &lt;h1 id=&#34;5-发布第一条博文&#34;&gt;5. 发布第一条博文&lt;/h1&gt;
 &lt;p&gt;使用hugo new post/my-first-post.md创建博文&lt;/p&gt;
-&lt;p&gt;使用hugo server -D启动本地服务器查看博文&lt;/p&gt;</description>
+&lt;p&gt;使用hugo server -D启动本地服务器查看博文&lt;/p&gt;
+&lt;h1 id=&#34;6-部署hugo网站到github-pages&#34;&gt;6. 部署Hugo网站到Github Pages&lt;/h1&gt;
+&lt;p&gt;创建目录
+&lt;code&gt;mkdir -p .github/workflows&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;创建工作流文件
+&lt;code&gt;touch .github/workflows/hugo.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;添加以下内容到 hugo.yaml&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-name:&#34; data-lang=&#34;name:&#34;&gt;
+on:
+  push:
+    branches:
+      - main  # 设置要触发部署的分支
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: &amp;#34;pages&amp;#34;
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: &amp;#39;latest&amp;#39;
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2```
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>
 </rss>
