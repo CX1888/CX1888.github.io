@@ -1,0 +1,12 @@
+.post-meta span {
+    margin-right: 5px;  /* 右侧间距 */
+}
+
+.post-meta span:after {
+    content: " | ";     /* 分隔符 */
+    margin: 0 5px;      /* 分隔符两侧的间距 */
+}
+
+.post-meta span:last-child:after {
+    content: "";        /* 最后一个元素后不添加分隔符 */
+}

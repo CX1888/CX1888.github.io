@@ -1,0 +1,19 @@
+{{- $scratch := newScratch }}
+
+{{- if not .Date.IsZero -}}
+<span>
+    Date: {{ .Date.Format "2006-01-02" }} |&nbsp; 
+</span>
+{{- end }}
+
+{{- if (.Param "ShowReadingTime") -}}
+<span>
+      Estimated reading time: {{ .ReadingTime }} min |&nbsp; 
+</span>
+{{- end }}
+
+{{- if .Params.Author }}
+<span>
+      Author: {{ .Params.Author }}
+</span>
+{{- end }}
